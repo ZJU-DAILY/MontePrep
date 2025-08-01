@@ -8,17 +8,9 @@ In commercial systems, a pervasive requirement for automatic data preparation (A
 
 ---
 
-## Framework Architecture
 
-The overall architecture of the framework is illustrated below:
 
-![Framework Architecture](figures/Framework.png)
-
----
-
-## Overview
-
-### Key Experimental Results
+## Key Experimental Results
 
 | **Method**       | **LLM Model**      | **Auto-Pipeline Dataset** |            |            | **Smart Buildings Dataset** |            |            |
 | :--------------- | :----------------- | :-----------------------: | :--------: | :--------: | :-------------------------: | :--------: | :--------: |
