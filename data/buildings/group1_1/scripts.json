@@ -1,0 +1,9 @@
+{
+  "reasoning": "The SQL script first drops the table if it exists and then creates a new table with specified columns. The next part of the SQL script selects and formats data from the Source1_1 table, transforming date formats and selecting specific columns. In pandas, we start by creating an empty DataFrame with the specified columns. We then extract and format the required data from the Source1_1 DataFrame, renaming columns to match the new DataFrame structure and finally storing the result in the new DataFrame.",
+  "code": [
+    "source_df['DT_STRATA'] = pd.to_datetime(source_df['DT_STRATA'], errors='coerce')",
+    "source_df['CST'] = source_df['DT_STRATA'].dt.strftime('%a %m/%d/%Y')",
+    "target_df = source_df[['CST', 'PCT_HOURLY_0100', 'PCT_HOURLY_0200', 'PCT_HOURLY_0300', 'PCT_HOURLY_0400', 'PCT_HOURLY_0500', 'PCT_HOURLY_0600', 'PCT_HOURLY_0700', 'PCT_HOURLY_0800', 'PCT_HOURLY_0900', 'PCT_HOURLY_1000', 'PCT_HOURLY_1100', 'PCT_HOURLY_1200', 'PCT_HOURLY_1300', 'PCT_HOURLY_1400', 'PCT_HOURLY_1500', 'PCT_HOURLY_1600', 'PCT_HOURLY_1700', 'PCT_HOURLY_1800', 'PCT_HOURLY_1900', 'PCT_HOURLY_2000', 'PCT_HOURLY_2100', 'PCT_HOURLY_2200', 'PCT_HOURLY_2300', 'PCT_HOURLY_2400']]",
+    "target_df.columns = ['CST', '1:00', '2:00', '3:00', '4:00', '5:00', '6:00', '7:00', '8:00', '9:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00', '24:00']"
+  ]
+}
